@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Horarios - Winston Club</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #29352e;
+            color: #f5f2e9;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        header {
+            background-color: #f5f2e9;
+            color: #29352e;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            text-align: center;
+            line-height: 1;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 4px;
+        }
+
+        .logo .winston {
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .logo .club {
+            font-size: 13px;
+            letter-spacing: 6px;
+        }
+
+        .contenido {
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            padding: 25px 15px 40px;
+        }
+
+        .volver {
+            display: inline-block;
+            color: #f5f2e9;
+            text-decoration: none;
+            font-size: 13px;
+            margin-bottom: 18px;
+        }
+
+        .volver:hover {
+            text-decoration: underline;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: 'Cinzel', serif;
+            font-size: 27px;
+            margin-bottom: 22px;
+            letter-spacing: 1px;
+        }
+
+        .horarios {
+            background-color: #f5f2e9;
+            color: #29352e;
+            border-radius: 10px;
+            padding: 20px;
+            border: 1px solid #8f9c8d;
+        }
+
+        .horarios h2 {
+            text-align: center;
+            font-family: 'Cinzel', serif;
+            font-size: 20px;
+            margin-bottom: 18px;
+        }
+
+        .dia {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            padding: 12px 0;
+            border-bottom: 1px solid #8f9c8d;
+            font-size: 14px;
+        }
+
+        .dia:last-child {
+            border-bottom: none;
+        }
+
+        .dia strong {
+            font-weight: 600;
+        }
+
+        .nota {
+            text-align: center;
+            font-size: 12px;
+            margin-top: 18px;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 380px) {
+            .contenido {
+                padding: 20px 15px 30px;
+            }
+
+            .dia {
+                font-size: 13px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            <div class="winston">WINSTON</div>
+            <div class="club">CLUB</div>
+        </div>
+
+    </header>
+
+    <main class="contenido">
+
+        <a href="index.html" class="volver">← Volver</a>
+
+        <h1>HORARIOS</h1>
+
+        <section class="horarios">
+
+            <h2>Winston Club</h2>
+
+            <div class="dia">
+                <strong>Lunes a viernes</strong>
+                <span>09:00 - 00:00</span>
+            </div>
+
+            <div class="dia">
+                <strong>Sábados y domingos</strong>
+                <span>08:00 - 01:00</span>
+            </div>
+
+
+            <p class="nota">Los horarios pueden variar en días feriados o fechas especiales.</p>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>

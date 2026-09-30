@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Winston Club</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #29352e;
+            color: #f5f2e9;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        
+
+        header {
+            background-color: #f5f2e9;
+            color: #29352e;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .logo {
+            text-align: center;
+            line-height: 1;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 4px;
+        }
+
+        .logo .winston {
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .logo .club {
+            font-size: 13px;
+            letter-spacing: 6px;
+        }
+
+        
+
+        .boton-menu {
+            background: #29352e;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 24px;
+            padding: 7px 11px;
+            cursor: pointer;
+        }
+
+        
+
+        .bienvenida {
+            text-align: center;
+            padding: 25px 15px 15px;
+        }
+
+        .bienvenida h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+        .bienvenida p {
+            font-size: 13px;
+            opacity: 0.8;
+        }
+
+        
+
+        .categorias {
+            display: grid;
+
+            /* 2 POR FILA */
+            grid-template-columns: 1fr 1fr;
+
+            gap: 10px;
+
+            padding: 15px;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        
+
+        .categoria {
+            position: relative;
+            width: 100%;
+
+            
+            aspect-ratio: 1 / 1;
+
+            overflow: hidden;
+            border-radius: 10px;
+            text-decoration: none;
+            border: 1px solid #8f9c8d;
+        }
+
+        .categoria img {
+            width: 100%;
+            height: 100%;
+
+            
+            object-fit: cover;
+
+            display: block;
+
+            transition: transform 0.3s;
+        }
+
+        .categoria:hover img {
+            transform: scale(1.05);
+        }
+
+        
+
+        .nombre-categoria {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+
+            padding: 12px 5px;
+
+            text-align: center;
+
+            background: rgba(30, 40, 34, 0.75);
+
+            color: white;
+
+            font-family: 'Cinzel', serif;
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        
+
+        .menu-lateral {
+            position: fixed;
+            top: 0;
+            right: -260px;
+
+            width: 260px;
+            height: 100%;
+
+            background: #f5f2e9;
+            color: #29352e;
+
+            padding: 25px;
+
+            z-index: 10;
+
+            transition: right 0.3s;
+        }
+
+        .menu-lateral.activo {
+            right: 0;
+        }
+
+        .cerrar {
+            font-size: 25px;
+            border: none;
+            background: none;
+            cursor: pointer;
+            float: right;
+        }
+
+        .menu-lateral h2 {
+            font-family: 'Cinzel', serif;
+            margin-top: 45px;
+            margin-bottom: 20px;
+        }
+
+        .menu-lateral a {
+            display: block;
+            text-decoration: none;
+            color: #29352e;
+            padding: 12px 0;
+            border-bottom: 1px solid #ccd0c8;
+        }
+
+        
+
+        .fondo-menu {
+            position: fixed;
+            inset: 0;
+
+            background: rgba(0,0,0,0.4);
+
+            display: none;
+
+            z-index: 9;
+        }
+
+        .fondo-menu.activo {
+            display: block;
+        }
+
+        
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            font-size: 11px;
+            opacity: 0.6;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    
+
+    <header>
+
+        <div class="logo">
+            <div class="winston">WINSTON</div>
+            <div class="club">CLUB</div>
+        </div>
+
+        <button class="boton-menu" onclick="abrirMenu()">☰</button>
+
+    </header>
+
+
+    
+
+    <div id="fondoMenu" class="fondo-menu" onclick="cerrarMenu()"></div>
+
+<div id="menuLateral" class="menu-lateral">
+
+    <button class="cerrar" onclick="cerrarMenu()">✕</button>
+
+    <h2>Winston Club</h2>
+
+    <a href="nosotros.html">Nosotros</a>
+
+    <a href="donde-estamos.html">¿Dónde estamos?</a>
+
+    <a href="horarios.html">Horarios</a>
+
+</div>
+
+
+    
+
+    <section class="bienvenida">
+
+        <h1>Nuestra Carta</h1>
+
+        <p>Elegí una categoría</p>
+
+    </section>
+
+
+    
+
+    <section class="categorias">
+
+        
+
+        <a href="sandwiches.html" class="categoria">
+
+            <img src="imagenes/sandwiches.jpg">
+
+            <div class="nombre-categoria">
+                SÁNDWICHES
+            </div>
+
+        </a>
+
+
+        
+
+        <a href="pizzas.html" class="categoria">
+
+            <img src="./Imagenes/pizza-pepperoni.jpg">
+
+            <div class="nombre-categoria">
+                PIZZAS
+            </div>
+
+        </a>
+
+
+        
+
+        <a href="sugerencias.html" class="categoria">
+
+            <img src="imagenes/sugerencias.jpg">
+
+            <div class="nombre-categoria">
+                SUGERENCIAS
+            </div>
+
+        </a>
+
+
+        
+
+        <a href="postres.html" class="categoria">
+
+            <img src="imagenes/postres.jpg">
+
+            <div class="nombre-categoria">
+                POSTRES
+            </div>
+
+        </a>
+
+
+        
+
+        <a href="cafeteria.html" class="categoria">
+
+            <img src="imagenes/cafeteria.jpg">
+
+            <div class="nombre-categoria">
+                CAFETERÍA
+            </div>
+
+        </a>
+
+
+        
+
+        <a href="bebidas.html" class="categoria">
+
+            <img src="imagenes/bebidas.jpg">
+
+            <div class="nombre-categoria">
+                BEBIDAS
+            </div>
+
+        </a>
+
+    </section>
+
+
+    <footer>
+        Winston Club · Menú Digital
+    </footer>
+
+
+    <script>
+
+        function abrirMenu() {
+
+            document.getElementById("menuLateral").classList.add("activo");
+
+            document.getElementById("fondoMenu").classList.add("activo");
+
+        }
+
+
+        function cerrarMenu() {
+
+            document.getElementById("menuLateral").classList.remove("activo");
+
+            document.getElementById("fondoMenu").classList.remove("activo");
+
+        }
+
+    </script>
+
+</body>
+</html>

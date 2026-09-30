@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #29352e;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+/* ENCABEZADO */
+
+.encabezado {
+    height: 80px;
+    background: #f5f2e9;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 20px;
+}
+
+.encabezado img {
+    width: 150px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* CONTENIDO */
+
+.pagina-categoria {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 25px 20px 40px;
+}
+
+/* VOLVER */
+
+.volver {
+    display: inline-block;
+    color: #f5f2e9;
+    text-decoration: none;
+    font-size: 13px;
+    margin-bottom: 18px;
+}
+
+.volver:hover {
+    text-decoration: underline;
+}
+
+/* TÍTULO */
+
+.titulo-categoria {
+    text-align: center;
+    color: #f5f2e9;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 28px;
+    text-transform: uppercase;
+    margin-bottom: 22px;
+    letter-spacing: 1px;
+}
+
+/* PRODUCTOS */
+
+.lista-productos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+/* TARJETA */
+
+.producto {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 9px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.6);
+    background: #555;
+}
+
+/* IMAGEN */
+
+.producto > img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* INFORMACIÓN SOBRE LA IMAGEN */
+
+.producto-info {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 8px 5px;
+    text-align: center;
+    background: rgba(40, 40, 40, 0.65);
+}
+
+/* NOMBRE */
+
+.producto-info h2 {
+    color: white;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+/* DESCRIPCIÓN */
+
+.producto-info p {
+    display: none;
+}
+
+/* PRECIO */
+
+.precio {
+    display: block;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    margin-top: 3px;
+}
+
+/* CELULAR CHICO */
+
+@media (max-width: 380px) {
+
+    .pagina-categoria {
+        padding: 20px 15px 30px;
+    }
+
+    .titulo-categoria {
+        font-size: 24px;
+    }
+
+    .lista-productos {
+        gap: 8px;
+    }
+
+    .producto-info h2 {
+        font-size: 12px;
+    }
+
+    .precio {
+        font-size: 11px;
+    }
+}
+.encabezado {
+    height: 80px;
+    background: #f5f2e9;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.nombre-bar {
+    color: #29352e;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 20px;
+    letter-spacing: 2px;
+}
+
+.nombre-bar span {
+    display: block;
+    font-size: 13px;
+    letter-spacing: 5px;
+    text-align: center;
+    margin-top: 2px;
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dónde estamos - Winston Club</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #29352e;
+            color: #f5f2e9;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        /* ENCABEZADO */
+
+        header {
+            background-color: #f5f2e9;
+            color: #29352e;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .logo {
+            text-align: center;
+            line-height: 1;
+            font-family: 'Cinzel', serif;
+            letter-spacing: 4px;
+        }
+
+        .logo .winston {
+            font-size: 22px;
+            font-weight: 700;
+        }
+
+        .logo .club {
+            font-size: 13px;
+            letter-spacing: 6px;
+        }
+
+        /* CONTENIDO */
+
+        .contenido {
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            padding: 25px 15px 40px;
+        }
+
+        /* VOLVER */
+
+        .volver {
+            display: inline-block;
+            color: #f5f2e9;
+            text-decoration: none;
+            font-size: 13px;
+            margin-bottom: 18px;
+        }
+
+        .volver:hover {
+            text-decoration: underline;
+        }
+
+        /* TÍTULO */
+
+        h1 {
+            text-align: center;
+            font-family: 'Cinzel', serif;
+            font-size: 27px;
+            margin-bottom: 22px;
+            letter-spacing: 1px;
+        }
+
+        /* TARJETA */
+
+        .ubicacion {
+            background-color: #f5f2e9;
+            color: #29352e;
+            border-radius: 10px;
+            padding: 15px;
+            border: 1px solid #8f9c8d;
+        }
+
+        .ubicacion h2 {
+            text-align: center;
+            font-family: 'Cinzel', serif;
+            font-size: 20px;
+            margin-bottom: 8px;
+        }
+
+        .direccion {
+            text-align: center;
+            font-size: 13px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        /* MAPA */
+
+        .mapa {
+            width: 100%;
+            height: 330px;
+            border-radius: 8px;
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+
+        .mapa iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+            display: block;
+        }
+
+        /* BOTÓN */
+
+        .boton-maps {
+            display: block;
+            width: 100%;
+            background-color: #29352e;
+            color: #f5f2e9;
+            text-decoration: none;
+            text-align: center;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .boton-maps:hover {
+            opacity: 0.85;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+
+    <header>
+
+        <div class="logo">
+            <div class="winston">WINSTON</div>
+            <div class="club">CLUB</div>
+        </div>
+
+    </header>
+
+
+    <!-- CONTENIDO -->
+
+    <main class="contenido">
+
+        <a href="index.html" class="volver">← Volver</a>
+
+        <h1>DÓNDE ESTAMOS</h1>
+
+
+        <section class="ubicacion">
+
+            <h2>Winston Club</h2>
+
+            <p class="direccion">
+                Guido 1962<br>
+                Ciudad Autónoma de Buenos Aires
+            </p>
+
+
+            <!-- MAPA -->
+
+            <div class="mapa">
+
+                <iframe
+                    src="https://www.google.com/maps?q=Guido+1962,+C1119,+Ciudad+Autonoma+de+Buenos+Aires,+Argentina&output=embed"
+                    loading="lazy"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+
+            <!-- BOTÓN -->
+
+            <a
+                href="https://www.google.com/maps/search/?api=1&query=Guido+1962,+C1119,+Ciudad+Autonoma+de+Buenos+Aires,+Argentina"
+                target="_blank"
+                class="boton-maps">
+                Abrir en Maps
+            </a>
+
+        </section>
+
+    </main>
+
+</body>
+
+</html>
